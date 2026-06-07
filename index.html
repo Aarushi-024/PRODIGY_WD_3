@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="mode-buttons">
+      <button id="btn-ai" class="mode-btn active" onclick="setMode('ai')">vs Computer</button>
+      <button id="btn-2p" class="mode-btn" onclick="setMode('2p')">2 Players</button>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score-box">
+        <span class="score-label" id="label-x">You (X)</span>
+        <span class="score-num" id="score-x">0</span>
+      </div>
+      <div class="score-box">
+        <span class="score-label">Draws</span>
+        <span class="score-num" id="score-d">0</span>
+      </div>
+      <div class="score-box">
+        <span class="score-label" id="label-o">CPU (O)</span>
+        <span class="score-num" id="score-o">0</span>
+      </div>
+    </div>
+
+    <p class="status" id="status">Your turn! (X)</p>
+
+    <div class="board" id="board">
+      <div class="cell" id="c0" onclick="handleClick(0)"></div>
+      <div class="cell" id="c1" onclick="handleClick(1)"></div>
+      <div class="cell" id="c2" onclick="handleClick(2)"></div>
+      <div class="cell" id="c3" onclick="handleClick(3)"></div>
+      <div class="cell" id="c4" onclick="handleClick(4)"></div>
+      <div class="cell" id="c5" onclick="handleClick(5)"></div>
+      <div class="cell" id="c6" onclick="handleClick(6)"></div>
+      <div class="cell" id="c7" onclick="handleClick(7)"></div>
+      <div class="cell" id="c8" onclick="handleClick(8)"></div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="resetBoard()">New Game</button>
+      <button onclick="resetAll()">Reset Scores</button>
+    </div>
+  </div>
+
+  <script src="TicTacToe.js"></script>
+</body>
+</html>
